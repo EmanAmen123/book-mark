@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main py-5">
+        <div class="container">
+            <h1 class="text-center">Bookmarker</h1>
+            <h3 class="text-center">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h3>
+            <div class="site w-100 d-flex flex-column justify-content-center">
+                <label for="name" class="mb-2"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                <input type="text" id="name" class="form-control mb-4" placeholder="Bookmark Name">
+                <label for="url" class="mb-2"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input type="text" id="url" class="form-control" placeholder="Website URL">
+                <button class="btn btn-dark px-5 d-block" onclick="getBooks()" id="btnSubmit" disabled>Submit</button>
+                <button class="btn btn-dark px-5 d-none" id="btnUpdate" onclick="updateProduct()">Update</button>
+
+                <input type="search" id="searchinput" onkeyup="searchBooks(this.value)" class="form-control w-50 mb-4 m-auto" placeholder="Search By Name...">
+
+            </div>
+            <table class="table mt-4 text-center table-hover">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="demo">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
